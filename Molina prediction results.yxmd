@@ -1,0 +1,939 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="858" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>,</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>254</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>step1_cleaned_original_molina_data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="order_id" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="Date" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="Timestamp" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="placement" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="target_group" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="IP" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="time_difference_second" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="conv_time" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="category" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="source" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="state" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="vendor" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="type" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="creative_name_clean" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="device" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="language" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="audience" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="time_difference_min" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="time_difference_day" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+            <Field name="month" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step1_cleaned_original_molina_data.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1050" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="order_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="order_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_order_id" selected="False" rename="Right_order_id" input="Right_" />
+                <SelectField field="Right_age_group" selected="False" input="Right_" />
+                <SelectField field="Right_audience" selected="False" rename="Right_audience" input="Right_" />
+                <SelectField field="Right_conversion" selected="False" input="Right_" />
+                <SelectField field="Right_creative_name_clean" selected="False" rename="Right_creative_name_clean" input="Right_" />
+                <SelectField field="Right_device" selected="False" rename="Right_device" input="Right_" />
+                <SelectField field="Right_gender" selected="False" input="Right_" />
+                <SelectField field="Right_language" selected="False" rename="Right_language" input="Right_" />
+                <SelectField field="Right_month" selected="False" rename="Right_month" input="Right_" />
+                <SelectField field="Right_percent_convert" selected="False" input="Right_" />
+                <SelectField field="Right_placement" selected="False" rename="Right_placement" input="Right_" />
+                <SelectField field="Right_state" selected="False" rename="Right_state" input="Right_" />
+                <SelectField field="Right_time_difference_day" selected="True" rename="Right_time_difference_day" input="Right_" />
+                <SelectField field="Right_time_difference_min" selected="False" rename="Right_time_difference_min" input="Right_" />
+                <SelectField field="Right_time_difference_second" selected="False" rename="Right_time_difference_second" input="Right_" />
+                <SelectField field="Right_total_conversion" selected="False" input="Right_" />
+                <SelectField field="Right_type" selected="False" rename="Right_type" input="Right_" />
+                <SelectField field="Right_within_one_day" selected="False" input="Right_" />
+                <SelectField field="Right_percent_non_convert" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="order_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="order_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_order_id" selected="True" input="Left_" />
+                <SelectField field="Left_Date" selected="True" input="Left_" />
+                <SelectField field="Left_Timestamp" selected="True" input="Left_" />
+                <SelectField field="Left_placement" selected="True" input="Left_" />
+                <SelectField field="Left_target_group" selected="True" input="Left_" />
+                <SelectField field="Left_IP" selected="True" input="Left_" />
+                <SelectField field="Left_time_difference_second" selected="True" input="Left_" />
+                <SelectField field="Left_conv_time" selected="True" input="Left_" />
+                <SelectField field="Left_category" selected="True" input="Left_" />
+                <SelectField field="Left_source" selected="True" input="Left_" />
+                <SelectField field="Left_state" selected="True" input="Left_" />
+                <SelectField field="Left_vendor" selected="True" input="Left_" />
+                <SelectField field="Left_type" selected="True" input="Left_" />
+                <SelectField field="Left_creative_name_clean" selected="True" input="Left_" />
+                <SelectField field="Left_device" selected="True" input="Left_" />
+                <SelectField field="Left_language" selected="True" input="Left_" />
+                <SelectField field="Left_audience" selected="True" input="Left_" />
+                <SelectField field="Left_time_difference_min" selected="True" input="Left_" />
+                <SelectField field="Left_time_difference_day" selected="True" input="Left_" />
+                <SelectField field="Left_month" selected="True" input="Left_" />
+                <SelectField field="Right_order_id" selected="False" rename="Right_order_id" input="Right_" />
+                <SelectField field="Right_audience" selected="False" rename="Right_audience" input="Right_" />
+                <SelectField field="Right_device" selected="False" rename="Right_device" input="Right_" />
+                <SelectField field="Right_language" selected="False" rename="Right_language" input="Right_" />
+                <SelectField field="Right_month" selected="False" rename="Right_month" input="Right_" />
+                <SelectField field="Right_placement" selected="False" rename="Right_placement" input="Right_" />
+                <SelectField field="Right_state" selected="False" rename="Right_state" input="Right_" />
+                <SelectField field="Right_time_difference_day" selected="False" rename="Right_time_difference_day" input="Right_" />
+                <SelectField field="Right_time_difference_min" selected="False" rename="Right_time_difference_min" input="Right_" />
+                <SelectField field="Right_time_difference_second" selected="False" rename="Right_time_difference_second" input="Right_" />
+                <SelectField field="Right_attribution_rate" selected="True" rename="Right_attribution_rate" input="Right_" />
+                <SelectField field="Left_Right_time_difference_day" selected="True" rename="Left_Right_time_difference_day" input="Left_" />
+                <SelectField field="Left_attribution_rate" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1278" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1398" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step3_final_result(pandora+audiology).csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>step3_final_result(pandora+audiology).csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="53" y="53" width="708" height="278" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Pandora</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="174" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="time_difference_day" selected="True" type="Double" size="8" />
+                <SelectField field="time_difference_min" selected="True" type="Double" size="8" />
+                <SelectField field="time_difference_second" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="438" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="exp((-4.365e-02) + [time_difference_second] * (-4.459e-06) + [month_11]* (-7.568e-03) + [state_Mississippi] * (-1.526e-02) + [state_South_Carolina]* (-7.832e-03) + type_Audio*(-7.378e-03) + [language_Spanish]*(-8.257e-03)) * 1.044&#xA;" field="attribution_rate" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>attribution_rate = exp((-4.365e-02) + [time_difference_second] * (-4.459e-06) + ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="630" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step3_Molina_Pandora_result.csv</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>step3_Molina_Pandora_result.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="654" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\yzhang\AppData\Local\Temp\Engine_18716_b4bae22b964b4462b572cb8a7242f69b_\Engine_14224_434d3c3f3f1b4ac9aad11a7ecff5191f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="595" y="247" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="attribution_rate" action="Max" rename="Max_attribution_rate" />
+                <SummarizeField field="attribution_rate" action="Min" rename="Min_attribution_rate" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="78.00001" y="198.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>step2_pandora_ready_for_modeling.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="age_group" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="audience" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="conversion" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="creative_name_clean" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="device" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="gender" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="language" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="month" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="order_id" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="percent_convert" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="percent_non_convert" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="placement" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="state" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_day" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_min" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_second" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="total_conversion" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="type" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+                <Field name="within_one_day" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_pandora_ready_for_modeling.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="294" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if month = &quot;11&quot;&#xA;then 1&#xA;else 0 &#xA;endif" field="month_11" size="8" type="Double" />
+                <FormulaField expression="if month = &quot;12&quot;&#xA;then 1&#xA;else 0 &#xA;endif" field="month_12" size="8" type="Double" />
+                <FormulaField expression="if state =  &quot;Mississippi&quot;&#xA;then 1 &#xA;else 0&#xA;endif" field="state_Mississippi" size="8" type="Double" />
+                <FormulaField expression="if state =  &quot;South Carolina&quot;&#xA;then 1 &#xA;else 0&#xA;endif" field="state_South_Carolina" size="8" type="Double" />
+                <FormulaField expression="if [type] = &quot;Audio&quot;&#xA;then 1 &#xA;else 0&#xA;endif" field="type_Audio" size="8" type="Double" />
+                <FormulaField expression="if [language] = &quot;Spanish&quot;&#xA;then 1&#xA;else 0&#xA;endif" field="language_Spanish" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>month_11 = if month = "11"
+then 1
+else 0 
+endif
+month_12 = if month = "12"
+then ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="534" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="order_id" selected="True" />
+                <SelectField field="age_group" selected="True" />
+                <SelectField field="audience" selected="True" />
+                <SelectField field="conversion" selected="True" />
+                <SelectField field="creative_name_clean" selected="True" />
+                <SelectField field="device" selected="True" />
+                <SelectField field="gender" selected="True" />
+                <SelectField field="language" selected="True" />
+                <SelectField field="month" selected="True" />
+                <SelectField field="percent_convert" selected="True" />
+                <SelectField field="placement" selected="True" />
+                <SelectField field="state" selected="True" />
+                <SelectField field="time_difference_day" selected="True" />
+                <SelectField field="time_difference_min" selected="True" />
+                <SelectField field="time_difference_second" selected="True" />
+                <SelectField field="total_conversion" selected="True" />
+                <SelectField field="type" selected="True" />
+                <SelectField field="within_one_day" selected="True" />
+                <SelectField field="month_11" selected="False" />
+                <SelectField field="month_12" selected="False" />
+                <SelectField field="state_Mississippi" selected="False" />
+                <SelectField field="state_South_Carolina" selected="False" />
+                <SelectField field="type_Audio" selected="False" />
+                <SelectField field="language_Spanish" selected="False" />
+                <SelectField field="percent_non_convert" selected="True" />
+                <SelectField field="attribution_rate" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="53" y="353" width="947" height="408" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Audiology</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="185.9999" y="414.0002" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="time_difference_day" selected="True" type="Double" size="8" />
+                <SelectField field="time_difference_min" selected="True" type="Double" size="8" />
+                <SelectField field="time_difference_second" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="451" y="403" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="exp((-9.541e-03) + time_difference_second * (-8.591e-05)) " field="attribution_rate" size="8" type="Double" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[attribution_rate = exp((-9.541e-03) + time_difference_second * (-8.591e-05)) 
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="630" y="402" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="attribution_rate" action="Max" rename="Max_attribution_rate" />
+                <SummarizeField field="attribution_rate" action="Min" rename="Min_attribution_rate" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="78.00001" y="426.0001" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>step2_audilogy_ready_for_modeling.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="audience" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="conversion" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="device" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="language" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="month" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="order_id" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="percent_convert" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="percent_non_convert" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="placement" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="state" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_day" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_min" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="time_difference_second" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="total_conversion" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+                <Field name="within_0.25_day" size="254" source="File: C:\Users\yzhang\Desktop\Molina\step2_audilogy_ready_for_modeling.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="462" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[time_difference_second]-0.25*24*60*60" field="time_difference_second_after+.25_day" size="8" type="Double" />
+                <FormulaField expression="if [language] = &quot;Spanish&quot;&#xA;then 1&#xA;else 0&#xA;endif " field="language_Spanish" size="8" type="Double" />
+                <FormulaField expression="(1.564e-01) + [time_difference_second_after+.25_day] * -1.171e-06 + [language_Spanish] * (-2.229e-03)" field="attribution_rate" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>time_difference_second_after+.25_day = [time_difference_second]-0.25*24*60*60
+la...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="36">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="294" y="425.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[within_0.25_day] = "True"</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>within_0.25_day</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-02-17 10:11:12</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>True</Operand>
+                  <StartDate>2020-02-17 10:11:12</StartDate>
+                  <EndDate>2020-02-17 10:11:12</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[within_0.25_day] = "True"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="666" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="858" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\yzhang\AppData\Local\Temp\Engine_18716_b4bae22b964b4462b572cb8a7242f69b_\Engine_14224_9b3c2edbc1804c7fbe3d3543cd1bc379_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="870" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\yzhang\Desktop\Molina\step3_Molina_Audiology_result.csv</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>step3_Molina_Audiology_result.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="618" y="630" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="attribution_rate" action="Max" rename="Max_attribution_rate" />
+                <SummarizeField field="attribution_rate" action="Min" rename="Min_attribution_rate" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="762" y="486" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="order_id" selected="True" />
+                <SelectField field="audience" selected="True" />
+                <SelectField field="conversion" selected="True" />
+                <SelectField field="device" selected="True" />
+                <SelectField field="language" selected="True" />
+                <SelectField field="month" selected="True" />
+                <SelectField field="percent_convert" selected="True" />
+                <SelectField field="placement" selected="True" />
+                <SelectField field="state" selected="True" />
+                <SelectField field="time_difference_day" selected="True" />
+                <SelectField field="time_difference_min" selected="True" />
+                <SelectField field="time_difference_second" selected="True" />
+                <SelectField field="total_conversion" selected="True" />
+                <SelectField field="within_0.25_day" selected="True" />
+                <SelectField field="percent_non_convert" selected="True" />
+                <SelectField field="attribution_rate" selected="True" />
+                <SelectField field="time_difference_second_after+.25_day" selected="False" />
+                <SelectField field="language_Spanish" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="43" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="44" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="44" Connection="Right" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="43" Connection="Join" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="44" Connection="Join" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="False" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Molina prediction results</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
